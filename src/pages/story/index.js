@@ -22,7 +22,7 @@ Story.getInitialProps = async ({ req, res, query }) => {
     story = await response.json();
     const { title } = story;
 
-    return { story, title };
+    return { story, title, backButton: true };
   } catch (error) {
     console.log(error);
     story = null;

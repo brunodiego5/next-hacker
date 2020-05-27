@@ -23,3 +23,9 @@ export const Container = styled.div`
 export const MainTitle = styled.span`
   font-weight: bold;
 `;
+
+export const BackButton = styled.span`
+  font-size: 0.9rem;
+  padding-right: 1em;
+  cursor: pointer;
+`;

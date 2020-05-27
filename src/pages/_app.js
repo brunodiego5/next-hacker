@@ -38,7 +38,7 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <GlobalSyles />
-        <Layout>
+        <Layout {...pageProps}>
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
