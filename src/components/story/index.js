@@ -1,5 +1,7 @@
 import React from "react";
 
+import CommentList from "../commentList";
+
 import * as Styled from "./styles";
 
 function Story({ story }) {
@@ -13,6 +15,12 @@ function Story({ story }) {
           <strong>{story.time_ago}</strong>
         </Styled.StoryDetails>
       </Styled.Title>
+
+      {story.comments.length > 0 ? (
+        <CommentList comments={story.comments} />
+      ) : (
+        <div>No comments for this story</div>
+      )}
     </Styled.Main>
   );
 }
