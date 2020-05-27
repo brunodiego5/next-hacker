@@ -5,6 +5,9 @@ import GlobalSyles from "../styles/global";
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress
+
+import Layout from "../components/layout";
+
 //Binding events.
 
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -35,7 +38,9 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <GlobalSyles />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     );
   }

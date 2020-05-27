@@ -33,18 +33,9 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="description" content="A site clone Hacker News" />
-
           <meta charSet="utf-8" />
           <meta name="robots" content="noindex, nofollow" />
           <meta name="viewport" content="width=device-width" />
-
-          <title>Hacker News</title>
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto"
-            rel="stylesheet"
-          ></link>
         </Head>
         <body>
           <Main />

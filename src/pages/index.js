@@ -9,12 +9,7 @@ function Index({ stories }) {
     return <Error statusCode={503} />;
   }
 
-  return (
-    <div>
-      <h1>hacker next</h1>
-      <StoryList stories={stories} />
-    </div>
-  );
+  return <StoryList stories={stories} />;
 }
 
 Index.getInitialProps = async () => {
@@ -29,7 +24,11 @@ Index.getInitialProps = async () => {
     stories = [];
   }
 
-  return { stories };
+  return {
+    stories,
+    title: "Hacker Next",
+    description: "A Hacker News clone made with Next.js",
+  };
 };
 
 export default Index;
