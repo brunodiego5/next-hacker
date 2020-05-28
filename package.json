@@ -6,7 +6,9 @@
   "author": "Bruno Domingues",
   "license": "MIT",
   "scripts": {
-    "dev": "next"
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
@@ -14,6 +16,7 @@
     "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "sw-precache-webpack-plugin": "^1.0.0"
   }
 }

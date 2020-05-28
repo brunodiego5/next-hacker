@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import fetch from "isomorphic-fetch";
 import Error from "next/error";
 
 import StoryList from "../components/storyList";
 import Footer from "../components/footer";
 
+import * as serviceWorker from "../serviceWorker";
+
 function Index({ page, stories }) {
+  useEffect(() => {
+    serviceWorker.register();
+  }, []);
+
   if (stories.length === 0) {
     return <Error statusCode={503} />;
   }
